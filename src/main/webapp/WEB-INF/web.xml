@@ -38,7 +38,7 @@
 	</mime-mapping>
 
 	<welcome-file-list>
-		<welcome-file>index.xhtml</welcome-file>
+		<welcome-file>PesquisaClientes.xhtml</welcome-file>
 	</welcome-file-list>
 
 	<context-param>

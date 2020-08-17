@@ -71,12 +71,9 @@ public class ClienteBean implements Serializable {
 		try {
 			FacesContext.getCurrentInstance().getExternalContext().redirect("CadastroCliente.xhtml");
 			this.clienteEdicao = cliente;
-
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(cliente);
 	}
 
 	public void excluir(Cliente cliente) {

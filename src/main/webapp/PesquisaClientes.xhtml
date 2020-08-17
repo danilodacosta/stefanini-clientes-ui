@@ -23,17 +23,29 @@
 			<p:dataTable value="#{clienteBean.clientes}" var="cliente"
 				reflow="true" style="margin-top: 20px"
 				paginator="true" rowsPerPageTemplate="5">
-				<p:column headerText="Nome">
+				<p:column headerText="Nome" filterBy="#{cliente.nome}">
 					<h:outputText value="#{cliente.nome}" />
 				</p:column>
-				<p:column headerText="CPF" priority="3">
+				<p:column headerText="CPF" filterBy="#{cliente.cpf}" priority="3" styleClass="sn-text-center">
 					<h:outputText value="#{cliente.cpf}" />
 				</p:column>
-				<p:column headerText="Email" priority="6">
+				<p:column headerText="E-mail" priority="6" styleClass="sn-text-center">
 					<h:outputText value="#{cliente.email}" />
 				</p:column>
 
-				<p:column headerText="Ações" style="text-align: center;">
+				<p:column headerText="Naturalidade" priority="6" styleClass="sn-text-center">
+					<h:outputText value="#{cliente.naturalidade}" />
+				</p:column>
+				
+				<p:column headerText="Date de Nascimento" priority="4" styleClass="sn-text-center">
+					<h:outputText value="#{cliente.dataNascimento}">
+					<f:converter converterId="localDateFacesConverter"/>
+					</h:outputText>
+				</p:column>
+				
+
+
+				<p:column headerText="Ações" styleClass="sn-text-center">
 					<p:commandButton icon="ui-icon-pencil" title="Editar"
 						value="editar" action="#{clienteBean.editar(cliente)}" />
 					<p:commandButton icon="ui-icon-trash" title="Excluir"
