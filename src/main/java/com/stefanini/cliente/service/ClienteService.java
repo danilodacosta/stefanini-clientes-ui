@@ -43,7 +43,7 @@ public class ClienteService implements Serializable {
 
 	//https://stefanini-clients-api.herokuapp.com/stefanini/v1/clientes/
 	private final String BASE_URL = "http://localhost:8081/stefanini/v1/clientes/";
-
+	
 	private Gson gson;
 
 	private ExceptionResponse exception; 
